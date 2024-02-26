@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KinoKor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href ="https://thumbs.dreamstime.com/b/letter-k-logo-symbol-impact-font-red-circle-white-background-isolation-letter-k-logo-symbol-red-circle-211786118.jpg">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <p class="logo">
+            Kino<span><a href = "index.html">Kor</a></span>
+        </p>
+
+        <i class="fa fa-bars" id="menu"></i>
+
+        <ul id="menu-box">
+            <div class="marker"></div>
+            <li>Home</li>
+            <li>Astana</li>
+            <li class="btn" id="accountBtn">Account</li>
+            <li class="btn" id="loginBtn"><a href = "signIn.html">Sign in</a></li>
+            <li class="btn" id="logoutBtn">Log Out</li>
+        </ul>
+
+    </nav>
+
+</header>
+<style>
+body{
+    background-color: #111111;
+}
+</style>
+<div id="movie-details-container">
+<h1>Movie Trailers</h1>
+</div>
+
+<script src="index.js"></script>
+<script src="auth.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('movieId');
+        const trailers = JSON.parse(sessionStorage.getItem(`movieTrailers_${movieId}`));
+
+        // Code to display trailers on the page
+        const container = document.getElementById('movie-details-container');
+        trailers.forEach(trailer => {
+            // Assuming trailers are YouTube videos, adjust as needed
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${trailer.key}`;
+            iframe.width = '560';
+            iframe.height = '315';
+            iframe.allowFullscreen = true;
+            iframe.classList.add('trailer-iframe');
+            container.appendChild(iframe);
+        });
+    });
+</script>
+</body>
+</html>

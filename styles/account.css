@@ -1,0 +1,218 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1200px;
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.sidebar {
+    width: 200px;
+    background: #111;
+    padding-top: 10px;
+    border-right: 2px solid #DB0000;
+}
+
+.account-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-details h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: -110px;
+}
+
+.account-info {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.update-form {
+    margin-top: 10px;
+}
+
+.update-form input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#updateAccountBtn {
+    margin-bottom: 25px;
+    border-radius: 90px;
+}
+
+#deleteAccountBtn {
+    border-radius: 90px;
+}
+
+.update-form button:hover {
+    background-color: #960000;
+}
+
+.input-field {
+    margin-top: 5px;
+}
+
+.account-info a:hover {
+    text-decoration: none;
+}
+
+.account-info button {
+    background-color: #DB0000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.account-info button:hover {
+    background-color: #960000;
+}
+
+.vertical-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-nav li {
+    display: block;
+    color: #fff;
+    padding: 30px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.vertical-nav li:hover {
+    background: #DB0000;
+}
+
+.payment-methods-info {
+    margin-top: 20px;
+}
+
+.feedback-form {
+    margin-top: 50px;
+    margin-bottom: 170px;
+    text-align: center;
+}
+
+.feedback-form textarea {
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.feedback-form textarea::placeholder {
+    text-align: center; /* Center the placeholder text */
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-form button {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #DB0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 70px;
+}
+
+.feedback-form button:hover {
+    background-color: #960000;
+}
+
+/* Adjustments for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding-top: 0;
+        border-right: none;
+    }
+
+    .vertical-nav li {
+        text-align: center;
+        padding: 10px 20px;
+    }
+}
+
+footer p {
+    margin-top: 30px;
+}
+
+/* Payment Methods Styles */
+.payment-methods-info {
+    margin-top: 20px;
+}
+
+.payment-methods-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#payment-method-form {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+#payment-method-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#payment-method-form input[type="text"],
+#payment-method-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 70px;
+    color: #fff;
+}
+
+#payment-method-form input[type="submit"] {
+    background-color: #DB0000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#payment-method-form input[type="submit"]:hover {
+    background-color: #960000;
+}
